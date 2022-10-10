@@ -4,6 +4,7 @@ import { initialData } from "../../database/products";
 import { ShopLayout } from "../../components/layouts/ShopLayout";
 import { ProductSlideShow } from "../../components/products";
 import { ItemCounter } from "../../components/ui/ItemCounter";
+import { SizeSelector } from "../../components/ui";
 
 const product = initialData.products[0];
 
@@ -27,6 +28,10 @@ const ProductPage = () => {
             <Box sx={{ my: 2 }}>
               <Typography variant="subtitle2">Quantity</Typography>
               <ItemCounter />
+              <SizeSelector
+                selectedSize={product.sizes[0]}
+                sizes={product.sizes}
+              />
             </Box>
 
             <Button color="secondary" className="circular-btn">
